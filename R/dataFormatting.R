@@ -273,6 +273,10 @@
     ) 
   )
 
+  if(ncol(message_table) == 0) {
+    return(NULL)
+  }
+  
   for(i in ncol(message_table)) {
     attributes(message_table[[i]]) <- list(units = units[i])
   }
